@@ -5241,6 +5241,12 @@ public final class Settings {
                 ANY_STRING_VALIDATOR;
 
         /**
+         * Whether to launch default music player when headset plugged in
+         * @hide
+         */
+        public static final String HEADSET_CONNECT_PLAYER = "headset_connect_player";
+
+        /**
          * Whether the phone vibrates on call connect
          * @hide
          */
