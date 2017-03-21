@@ -244,6 +244,8 @@
     <!-- DayNight mode -->
     <uses-permission android:name="android.permission.MODIFY_DAY_NIGHT_MODE" />
 
+    <protected-broadcast android:name="android.intent.action.SCREEN_STATE_SERVICE_UPDATE" />
+
     <application
         android:name=".SystemUIApplication"
         android:persistent="true"
@@ -317,6 +319,13 @@
                 <action android:name="com.android.systemui.action.REFRESH_SOUND" />
             </intent-filter>
         </receiver>
+
+        <service android:name=".screenstate.ScreenStateService"
+                android:exported="true" >
+            <intent-filter>
+               <action android:name="android.intent.action.SCREEN_STATE_SERVICE_UPDATE"/>
+            </intent-filter>
+		</service>
 
         <service android:name=".ImageWallpaper"
                 android:permission="android.permission.BIND_WALLPAPER"
