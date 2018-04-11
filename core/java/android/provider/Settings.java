@@ -5297,6 +5297,17 @@ public final class Settings {
         public static final String FONT_PACKAGES = "font_packages";
 
         /**
+         * Whether to change the transparency of the qs panel
+         * @hide
+         */
+        public static final String QS_PANEL_BG_ALPHA = "qs_panel_bg_alpha";
+
+        /** @hide */
+
+        private static final Validator QS_PANEL_BG_ALPHA_VALIDATOR =
+                ANY_INTEGER_VALIDATOR;
+
+        /**
          * Settings to backup. This is here so that it's in the same place as the settings
          * keys and easy to update.
          *
@@ -5442,6 +5453,7 @@ public final class Settings {
             VOLUME_KEY_CURSOR_CONTROL,
             VOLUME_ROCKER_WAKE,
             WAKE_WHEN_PLUGGED_OR_UNPLUGGED,
+            QS_PANEL_BG_ALPHA,
             DOZE_ON_CHARGE
         };
 
@@ -5651,6 +5663,7 @@ public final class Settings {
             PRIVATE_SETTINGS.add(SHOW_BATTERY_PERCENT);
             PRIVATE_SETTINGS.add(DISPLAY_COLOR_MODE);
             PRIVATE_SETTINGS.add(DOZE_ON_CHARGE);
+            PRIVATE_SETTINGS.add(QS_PANEL_BG_ALPHA);
 
             // Pocket mode handler.
             PRIVATE_SETTINGS.add(POCKET_JUDGE);
@@ -5833,6 +5846,7 @@ public final class Settings {
             VALIDATORS.put(NOTIFICATION_LIGHT_PULSE, BOOLEAN_VALIDATOR);
             VALIDATORS.put(DOZE_ON_CHARGE, DOZE_ON_CHARGE_VALIDATOR);
             VALIDATORS.put(STATUS_BAR_LOGO, STATUS_BAR_LOGO_VALIDATOR);
+            VALIDATORS.put(QS_PANEL_BG_ALPHA, QS_PANEL_BG_ALPHA_VALIDATOR);
         }
 
         /**
