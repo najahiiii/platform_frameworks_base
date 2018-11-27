@@ -4432,8 +4432,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         if (mDeviceKeyHandler != null) {
             try {
                 // The device only should consume known keys.
-                event = mDeviceKeyHandler.handleKeyEvent(event);
-                if (event == null) {
+                if (mDeviceKeyHandler.handleKeyEvent(event)) {
                     return -1;
                 }
             } catch (Exception e) {
@@ -6627,8 +6626,7 @@ public class PhoneWindowManager implements WindowManagerPolicy {
         if (mDeviceKeyHandler != null) {
             try {
                 // The device only should consume known keys.
-                event = mDeviceKeyHandler.handleKeyEvent(event);
-                if (event == null) {
+                if (mDeviceKeyHandler.handleKeyEvent(event)) {
                     return 0;
                 }
             } catch (Exception e) {
