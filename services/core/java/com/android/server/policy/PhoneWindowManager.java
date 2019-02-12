@@ -1128,6 +1128,9 @@ public class PhoneWindowManager implements WindowManagerPolicy {
                     Settings.Secure.LOCK_POWER_MENU_DISABLED), false, this,
                     UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
+                    Settings.System.BOTTOM_GESTURE_FEEDBACK_DURATION), false, this,
+                    UserHandle.USER_ALL);
+            resolver.registerContentObserver(Settings.System.getUriFor(
                     Settings.System.VOLUME_ROCKER_WAKE), false, this,
                     UserHandle.USER_ALL);
             resolver.registerContentObserver(Settings.System.getUriFor(
