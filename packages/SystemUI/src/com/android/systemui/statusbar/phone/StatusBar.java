@@ -5818,12 +5818,16 @@ public class StatusBar extends SystemUI implements DemoMode, TunerService.Tunabl
         public void onChange(boolean selfChange, Uri uri) {
             if (uri.equals(Settings.System.getUriFor(
                     Settings.System.ACCENT_PICKER))) {
-                unloadAccents();
-                updateAccents();
+                mUiOffloadThread.submit(() -> {
+                    unloadAccents(); // Unload the accents when users request it
+                    updateAccents(); // Update the accents when users request it
+                });
             } else if (uri.equals(Settings.System.getUriFor(
                     Settings.System.QS_TILE_STYLE))) {
-                unlockQsTileStyles();
-                updateTileStyle();
+                mUiOffloadThread.submit(() -> {
+                    unlockQsTileStyles();
+                    updateTileStyle();
+                });
             } else if (uri.equals(Settings.System.getUriFor(
                     Settings.System.USE_OLD_MOBILETYPE))) {
                 setOldMobileType();
