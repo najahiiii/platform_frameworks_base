@@ -249,6 +249,10 @@
     <!-- Font tile -->
     <uses-permission android:name="android.permission.ACCESS_FONT_MANAGER" />
 
+    <!-- Sync tile -->
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
     <application
         android:name=".SystemUIApplication"
         android:persistent="true"
