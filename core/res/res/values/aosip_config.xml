@@ -92,7 +92,7 @@
     <item name="config_screenAspectRatio" format="float" type="dimen">2.1</item>
 
     <!-- Whether to show emergency button in power menu -->
-    <bool name="config_showEmergencyButtonInPowerMenu">false</bool>
+    <bool name="config_showEmergencyButtonInPowerMenu">true</bool>
 
     <!-- Power menu -->
     <string-array translatable="false" name="config_custom_globalActionsList">
@@ -110,7 +110,7 @@
     <bool name="config_hasDashCharger">false</bool>
 
     <!-- Ambient display music ticker -->
-    <bool name="config_canForceDozeNotifications">true</bool>
+    <bool name="config_canForceDozeNotifications">false</bool>
 
 	<!-- Any package that has one of the package names defined below will be prevented
          from using specific sensors in order to stop battery drain -->
@@ -135,7 +135,7 @@
     <string name="config_pocketBridgeSysfsInpocket"></string>
 
     <!-- Whether device ignores the RSSNR signal implementation -->
-    <bool name="config_ignoreRssnrSignalLevel">false</bool>
+    <bool name="config_ignoreRssnrSignalLevel">true</bool>
     
     <!-- Paths to the libraries that contain device specific key handlers -->
     <string-array name="config_deviceKeyHandlerLibs" translatable="false">
